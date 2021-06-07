@@ -1,0 +1,10 @@
+
+{% extends 'energize/base.html' %} {% block content %}
+<h2>{{ drink.name }} <a href="{% url 'drink_edit' pk=drink.pk %}">(edit)</a></h2>
+<h4>{{ drink.caffeine_content }}</h4>
+
+<img src="{{ drink.image_url }}" alt="" class="drink-photo" />
+
+<a href="{% url 'drink_delete' pk=drink.pk %}">Delete</a>
+
+{% endblock %}

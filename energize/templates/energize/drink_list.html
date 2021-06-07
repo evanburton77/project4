@@ -1,0 +1,10 @@
+{% extends 'energize/base.html' %} {% block content %}
+<h2>Drinks <a href="{% url 'drink_create' %}">(+)</a></h2>
+<ul>
+  {% for drink in drinks %}
+  <li>
+    <a href="{% url 'drink_detail' pk=drink.pk %}">{{ drink.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
